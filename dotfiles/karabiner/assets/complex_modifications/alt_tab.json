@@ -1,0 +1,20 @@
+{
+  "title": "Alt-Tab style switcher",
+  "rules": [
+    {
+      "description": "Option+Tab → Command+Tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": { "mandatory": ["option"], "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "tab", "modifiers": ["command"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

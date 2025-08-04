@@ -1,0 +1,62 @@
+{
+  "title": "Ctrl + Plus zooms in (system-wide)",
+  "rules": [
+    {
+      "description": "Map physical Ctrl+Shift+= (or keypad +) to Cmd+Plus",
+      "manipulators": [
+        /* Main =/+ key (needs Shift for the plus symbol) */
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign",                  // the =/+ key
+            "modifiers": {
+              "mandatory": [ "control" ],              // your physical Ctrl
+              "optional": [ "shift", "any" ]           // carry Shift if present
+            }
+          },
+          "to": [
+            { "key_code": "equal_sign", "modifiers": [ "command", "shift" ] }
+          ]
+        },
+
+        /* Optional — numeric-keypad plus key */
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "keypad_plus",
+            "modifiers": { "mandatory": [ "control" ], "optional": [ "any" ] }
+          },
+          "to": [
+            { "key_code": "keypad_plus", "modifiers": [ "command" ] }
+          ]
+        }
+      ]
+    },
+            /* Ctrl+Minus → Cmd+Minus  (zoom-out) */
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",                     // the -/_ key
+            "modifiers": {
+              "mandatory": [ "control" ],
+              "optional": [ "any" ]
+            }
+          },
+          "to": [
+            { "key_code": "hyphen", "modifiers": [ "command" ] }
+          ]
+        },
+
+        /* Optional — numeric-keypad minus */
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "keypad_hyphen",
+            "modifiers": { "mandatory": [ "control" ], "optional": [ "any" ] }
+          },
+          "to": [
+            { "key_code": "keypad_hyphen", "modifiers": [ "command" ] }
+          ]
+        }
+  ]
+}

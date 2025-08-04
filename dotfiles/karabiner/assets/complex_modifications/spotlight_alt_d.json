@@ -1,0 +1,23 @@
+{
+  "title": "Option D opens Spotlight",
+  "rules": [
+    {
+      "description": "⌥D → ⌘Space (Show Spotlight)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": ["option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            { "key_code": "spacebar", "modifiers": ["command"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

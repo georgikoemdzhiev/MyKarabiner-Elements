@@ -1,0 +1,30 @@
+{
+  "title": "Ctrl+Backspace deletes previous word",
+  "rules": [
+    {
+      "description": "Map Ctrl (phys) / Cmd (logical) + Backspace to Option + Backspace",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": { "mandatory": ["control"], "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "delete_or_backspace", "modifiers": ["option"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": { "mandatory": ["command"], "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "delete_or_backspace", "modifiers": ["option"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

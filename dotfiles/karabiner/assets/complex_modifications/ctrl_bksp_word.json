@@ -1,0 +1,24 @@
+{
+  "title": "Ctrl+Backspace = Option+Backspace (delete word)",
+  "rules": [
+    {
+      "description": "works no matter how you swapped modifiers",
+      "manipulators": [
+        { "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": { "mandatory": ["control"], "optional": ["any"] }
+          },
+          "to": [{ "key_code": "delete_or_backspace", "modifiers": ["option"] }]
+        },
+        { "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": { "mandatory": ["command"], "optional": ["any"] }
+          },
+          "to": [{ "key_code": "delete_or_backspace", "modifiers": ["option"] }]
+        }
+      ]
+    }
+  ]
+}
